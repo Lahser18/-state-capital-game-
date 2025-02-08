@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>State Scramble: The Great 50-State Adventure!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>🇺🇸 State Scramble: The Great 50-State Adventure! 🌟</h1>
+        <p>Become a State Expert by learning US States, Capitals, and Their Locations!</p>
+    </header>
+
+    <div id="welcome" class="container">
+        <h2>How to Play:</h2>
+        <ol>
+            <li>Type the capital of the state shown on the flashcard.</li>
+            <li>See your score and get immediate feedback.</li>
+            <li>Try to get as many right as possible for a higher grade!</li>
+        </ol>
+        <button id="startButton">Start Learning! 🎮</button>
+        <div id="gameCount">Games Played: <span id="count">0</span></div>
+        <div id="leaderboard">
+            <h3>Leaderboard</h3>
+            <ol id="leaderboardList">
+                <!-- Leaderboard entries will be dynamically added here -->
+            </ol>
+        </div>
+    </div>
+
+    <div id="game" class="container hide">
+        <div class="col-left">
+            <canvas id="scorebox" class="scoremeter"></canvas>
+            <div id="grade" class="grade-box"></div>
+            <button id="nextButton" class="gameButton">Next Question</button>
+        </div>
+        <div class="col-right">
+            <map id="stateMap"></map>
+            <div id="question">
+                <div id="flashcard"></div>
+                <input type="text" id="capitalInput" placeholder="Type the capital..." class="input-box">
+            </div>
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <div id="end" class="container hide">
+        <h2>Game Over! 🎉</h2>
+        <p>Your Final Score: <strong id="finalScore">0</strong>/100</p>
+        <p>Your Grade: <strong id="finalGrade">-</strong></p>
+        <button id="playAgain">Play Again!</button>
+    </div>
+</body>
+</html>
